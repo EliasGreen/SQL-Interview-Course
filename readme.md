@@ -6,4 +6,4 @@
 ### [001 SELECT - стартуем приключение](https://github.com/EliasGreen/SQL-Interview-Course/blob/main/course/001%20SELECT.md)
 
 -----
-Автор: t.me/EliasZauer
+Автор: [EliasZauer](https://t.me/EliasZauer)
