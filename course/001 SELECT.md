@@ -176,19 +176,16 @@ FROM Characters
 2). Задача под звездочкой. Написать запрос, который выведет цифру 9 столько раз, сколько строчек в таблице  Characters
 
 ```
-SELECT OriginPlanetID, Gender
-FROM Characters
-```
-
-```
 SELECT 9
 FROM Characters
 ```
 
 <details>
-  <summary>Нажмите здесь, чтобы увидеть тайну!</summary>
-  <!-- Птенчик знает, чем чирикнет -->
-  <p>Здесь скрывается уникальная информация, которую изначально не видать.</p>
+  <summary>Ответ на задачу 1</summary>
+    ```
+    SELECT OriginPlanetID, Gender
+    FROM Characters
+    ```
 </details>
 
 
