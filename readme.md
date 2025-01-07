@@ -3,5 +3,5 @@
 # Открытый и бесплатный SQL курс без воды, после которого ты сможешь ломать любую SQL задачу на собеседовании 
 
 ## Оглавление
-### 001 SELECT - стартуем приключение
+### [001 SELECT - стартуем приключение](https://github.com/EliasGreen/SQL-Interview-Course/blob/main/course/001%20SELECT.md)
 
