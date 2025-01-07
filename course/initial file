@@ -1,1 +1,74 @@
+CREATE TABLE Characters (
+    CharacterID INT PRIMARY KEY AUTO_INCREMENT,
+    Name VARCHAR(100) NOT NULL,
+    Gender VARCHAR(20),
+    Grade VARCHAR(10),
+    Status VARCHAR(20) CHECK (Status IN ('Alive', 'Deceased', 'Unknown')),
+    UNIQUE (Name)
+);
 
+CREATE TABLE Locations (
+    LocationID INT PRIMARY KEY AUTO_INCREMENT,
+    LocationName VARCHAR(100) NOT NULL,
+    Type VARCHAR(50),
+    Description TEXT,
+    UNIQUE (LocationName)
+);
+
+
+CREATE TABLE Episodes (
+    EpisodeID INT PRIMARY KEY AUTO_INCREMENT,
+    Title VARCHAR(200) NOT NULL,
+    Season INT NOT NULL,
+    EpisodeNumber INT NOT NULL,
+    AirDate DATE,
+    UNIQUE (Season, EpisodeNumber)
+);
+
+
+CREATE TABLE Appearances (
+    AppearanceID INT PRIMARY KEY AUTO_INCREMENT,
+    CharacterID INT NOT NULL,
+    EpisodeID INT NOT NULL,
+    FOREIGN KEY (CharacterID) REFERENCES Characters(CharacterID),
+    FOREIGN KEY (EpisodeID) REFERENCES Episodes(EpisodeID)
+);
+
+CREATE TABLE Items (
+    ItemID INT PRIMARY KEY AUTO_INCREMENT,
+    Name VARCHAR(100) NOT NULL,
+    Description TEXT,
+    OwnerID INT,
+    FOREIGN KEY (OwnerID) REFERENCES Characters(CharacterID)
+);
+
+-- Insert data into Locations table
+INSERT INTO Locations (LocationName, Type, Description) VALUES
+('South Park Elementary', 'School', 'Main school in South Park'),
+('Stark\'s Pond', 'Natural Area', 'Popular hangout for kids'),
+('Tweek Bros. Coffeehouse', 'Business', 'Coffee shop owned by Tweek\'s family');
+
+-- Insert data into Characters table
+INSERT INTO Characters (Name, Gender, Grade, Status) VALUES
+('Eric Cartman', 'Male', '4th', 'Alive'),
+('Stan Marsh', 'Male', '4th', 'Alive'),
+('Kyle Broflovski', 'Male', '4th', 'Alive'),
+('Kenny McCormick', 'Male', '4th', 'Unknown');
+
+-- Insert data into Episodes table
+INSERT INTO Episodes (Title, Season, EpisodeNumber, AirDate) VALUES
+('Cartman Gets an Anal Probe', 1, 1, '1997-08-13'),
+('Volcano', 1, 2, '1997-08-20'),
+('Weight Gain 4000', 1, 3, '1997-08-27');
+
+-- Insert data into Appearances table
+INSERT INTO Appearances (CharacterID, EpisodeID) VALUES
+(1, 1), -- Cartman in Episode 1
+(2, 1), -- Stan in Episode 1
+(3, 1), -- Kyle in Episode 1
+(4, 1); -- Kenny in Episode 1
+
+-- Insert data into Items table
+INSERT INTO Items (Name, Description, OwnerID) VALUES
+('Cheesy Poofs', 'Cartman\'s favorite snack', 1),
+('Kenny\'s Orange Hoodie', 'Indestructible hoodie', 4);
