@@ -170,22 +170,34 @@ FROM Characters
 Итого: вы научились выбирать данные из таблички
 Дальше - больше
 
+-------
+
 А пока можете выполнить домашнее задание:
 
 1). Написать SELECT из таблицы Characters, который выберет столбцы OriginPlanetID и Gender (именно в таком порядке)
-2). Задача под звездочкой. Написать запрос, который выведет цифру 9 столько раз, сколько строчек в таблице  Characters
 
-```
-SELECT 9
-FROM Characters
-```
+2). Задача под звездочкой. Написать запрос, который выведет цифру 9 столько раз, сколько строчек в таблице  Characters
 
 <details>
   <summary>Ответ на задачу 1</summary>
-    ```
+<p>
+
     SELECT OriginPlanetID, Gender
     FROM Characters
-    ```
+    
+ </p>
+    
+</details>
+
+<details>
+  <summary>Ответ на задачу 2</summary>
+<p>
+
+    SELECT 9
+    FROM Characters
+    
+ </p>
+    
 </details>
 
 
