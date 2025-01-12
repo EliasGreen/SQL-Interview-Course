@@ -4,6 +4,7 @@
 
 ## Оглавление
 ### [001 SELECT - стартуем приключение](https://github.com/EliasGreen/SQL-Interview-Course/blob/main/course/001%20SELECT.md)
+### [002 WHERE - фильтруем (но не пиво)](https://github.com/EliasGreen/SQL-Interview-Course/blob/main/course/002%20WHERE.md)
 
 -----
 Автор: [EliasZauer](https://t.me/EliasZauer)
