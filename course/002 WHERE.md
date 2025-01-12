@@ -145,14 +145,16 @@ WHERE (Status != 'Alive') OR CharacterID <= 2
 А пока можете выполнить домашнее задание:
 
 1). Выбрать из таблицы Characters строчки, у которых CharacterID строго больше 2 и статус равен Alive
+
 2). Задача под звездочкой. Придумайте запрос, который выведет из таблицы Characters все строки и аналогичный запрос, который выведет 0 строк, при этом нельзя использовать названия столбцов
 
 <details>
   <summary>Ответ на задачу 1</summary>
 <p>
 
-    SELECT Gender, Name
-    FROM Characters
+    SELECT *
+    FROM CHARACTERS
+    WHERE (Status = 'Alive') AND CharacterID > 2
     
  </p>
     
@@ -162,8 +164,13 @@ WHERE (Status != 'Alive') OR CharacterID <= 2
   <summary>Ответ на задачу 2</summary>
 <p>
 
-    SELECT 9
+    SELECT *
     FROM Characters
+    WHERE 1=1
+    --- это комментарий, не пугайтесь
+    SELECT *
+    FROM Characters
+    WHERE 0>1
     
  </p>
     
