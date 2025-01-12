@@ -134,10 +134,9 @@ SELECT 9 > 0
 CREATE TABLE Characters (
     CharacterID INTEGER PRIMARY KEY AUTOINCREMENT,
     Name VARCHAR(100) NOT NULL,
-    Species VARCHAR(50),
     Gender VARCHAR(20),
-    OriginPlanetID INT,
-    Status VARCHAR(20) CHECK (Status IN ('Alive', 'Dead', 'Unknown')),
+    Grade VARCHAR(10),
+    Status VARCHAR(20) CHECK (Status IN ('Alive', 'Deceased', 'Unknown')),
     UNIQUE (Name)
 );
 ```
@@ -146,10 +145,12 @@ CREATE TABLE Characters (
 
 ```
 -- Insert data into Characters table
-INSERT INTO Characters (Name, Species, Gender, OriginPlanetID, Status) VALUES
-('Rick Sanchez', 'Human', 'Male', 1, 'Alive'),
-('Morty Smith', 'Human', 'Male', 1, 'Alive'),
-('Summer Smith', 'Human', 'Female', 1, 'Alive');
+INSERT INTO Characters (Name, Gender, Grade, Status) VALUES
+('Eric Cartman', 'Male', '4th', 'Alive'),
+('Stan Marsh', 'Male', '4th', 'Alive'),
+('Kyle Broflovski', 'Male', '4th', 'Alive'),
+('Kenny McCormick', 'Male', '4th', 'Unknown');
+
 ```
 
 Вот этой строчкой выберем теперь все данные из уже созданной и заполненной таблички
@@ -170,7 +171,7 @@ FROM Characters
 Но мы можем просто выбрать по названию столбцов только нужные нам ->
 
 ```
-SELECT Name, Species, Gender, OriginPlanetID, Status
+SELECT Name, Gender, Grade
 FROM Characters
 ```
 
@@ -185,7 +186,7 @@ FROM Characters
 
 А пока можете выполнить домашнее задание:
 
-1). Написать SELECT из таблицы Characters, который выберет столбцы OriginPlanetID и Gender (именно в таком порядке)
+1). Написать SELECT из таблицы Characters, который выберет столбцы Gender и Name (именно в таком порядке)
 
 2). Задача под звездочкой. Написать запрос, который выведет цифру 9 столько раз, сколько строчек в таблице  Characters
 
@@ -193,7 +194,7 @@ FROM Characters
   <summary>Ответ на задачу 1</summary>
 <p>
 
-    SELECT OriginPlanetID, Gender
+    SELECT Gender, Name
     FROM Characters
     
  </p>
