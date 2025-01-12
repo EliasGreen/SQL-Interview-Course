@@ -31,3 +31,35 @@
 ## [3] Готовимся к поиску нужных данных
 
 Теперь создадим заново нашу табличку и наполнил ее нужными данными
+
+```
+CREATE TABLE Characters (
+    CharacterID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Name VARCHAR(100) NOT NULL,
+    Species VARCHAR(50),
+    Gender VARCHAR(20),
+    OriginPlanetID INT,
+    Status VARCHAR(20) CHECK (Status IN ('Alive', 'Dead', 'Unknown')),
+    UNIQUE (Name)
+);
+```
+
+И вот этими строчками вставим трех персонажей в табличку
+
+```
+-- Insert data into Characters table
+INSERT INTO Characters (Name, Species, Gender, OriginPlanetID, Status) VALUES
+('Rick Sanchez', 'Human', 'Male', 1, 'Alive'),
+('Morty Smith', 'Human', 'Male', 1, 'Alive'),
+('Summer Smith', 'Human', 'Female', 1, 'Alive');
+```
+
+Вот этой строчкой выберем теперь все данные из уже созданной и заполненной таблички
+
+```
+SELECT *
+FROM Characters
+```
+
+![image](https://github.com/user-attachments/assets/d92d78f1-a4ab-4f9a-88a7-4909b98e42f2)
+
