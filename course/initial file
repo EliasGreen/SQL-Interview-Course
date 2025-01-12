@@ -7,6 +7,17 @@ CREATE TABLE Characters (
     UNIQUE (Name)
 );
 
+
+-- Insert data into Characters table
+INSERT INTO Characters (Name, Gender, Grade, Status) VALUES
+('Eric Cartman', 'Male', '4th', 'Alive'),
+('Stan Marsh', 'Male', '4th', 'Alive'),
+('Kyle Broflovski', 'Male', '4th', 'Alive'),
+('Kenny McCormick', 'Male', '4th', 'Unknown');
+
+
+----
+
 CREATE TABLE Locations (
     LocationID INT PRIMARY KEY AUTO_INCREMENT,
     LocationName VARCHAR(100) NOT NULL,
@@ -48,12 +59,6 @@ INSERT INTO Locations (LocationName, Type, Description) VALUES
 ('Stark\'s Pond', 'Natural Area', 'Popular hangout for kids'),
 ('Tweek Bros. Coffeehouse', 'Business', 'Coffee shop owned by Tweek\'s family');
 
--- Insert data into Characters table
-INSERT INTO Characters (Name, Gender, Grade, Status) VALUES
-('Eric Cartman', 'Male', '4th', 'Alive'),
-('Stan Marsh', 'Male', '4th', 'Alive'),
-('Kyle Broflovski', 'Male', '4th', 'Alive'),
-('Kenny McCormick', 'Male', '4th', 'Unknown');
 
 -- Insert data into Episodes table
 INSERT INTO Episodes (Title, Season, EpisodeNumber, AirDate) VALUES
