@@ -21,3 +21,4 @@
 
 Тогда что ты можешь потенциально увидеть через тот же самый DBeaver, когда к ней подключишься ->
 
+![image](https://github.com/user-attachments/assets/7e913b79-a0a3-4c4f-b6dc-3a94315c8865)
