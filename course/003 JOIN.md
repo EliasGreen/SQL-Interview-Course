@@ -385,6 +385,17 @@ SELECT * FROM Items
     
 </details>
 
+<details>
+  <summary>Ответ на задачу 3</summary>
+<p>
+
+Минимум 5, максимум 50
+    
+ </p>
+    
+</details>
+
+
 
 <details>
   <summary>Ответ на задачу 4</summary>
