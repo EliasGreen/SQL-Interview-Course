@@ -1,4 +1,5 @@
-![alright-eric-cartman](https://github.com/user-attachments/assets/c1d68ff5-fde8-4310-9e7c-0839eacf5cf1)
+![image](https://github.com/user-attachments/assets/bd82951a-abbd-4d4c-9079-3ad9ee02edb9)
+
 
 ## [1] Мир нескольких табличек
 
