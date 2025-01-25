@@ -8,5 +8,6 @@
 
 -----
 Автор: [EliasZauer](https://t.me/EliasZauer)
+Помогу найти твою первую работу аналитиком от 150к -> https://eliaszauer.tilda.ws/
 
-v001
+v002
