@@ -347,17 +347,24 @@ SELECT * FROM Items
 Но не бойтесь, вам как и прежде не нужно будет знать сюжет и т.п. - вы и без этого сможете спокойно выполнять задания
 
 
-1). Выбрать из таблицы Characters строчки, у которых CharacterID строго больше 2 и статус равен Alive
+1). Вывести "Item name" (название предмета) и "Char name" (имя владельца предмета)
 
-2). Задача под звездочкой. Придумайте запрос, который выведет из таблицы Characters все строки и аналогичный запрос, который выведет 0 строк, при этом нельзя использовать названия столбцов
+2). Вывести список всех персонажей и предметы, которыми они владеют
+
+3). Какое минимальное и максимальное кол-во строчек будет при LEFT JOIN'e таблицы из 10-ти строчек на таблицу из 5-ти строчек?
+
+4). Какое минимальное и максимальное кол-во строчек будет при FULL JOIN'e таблицы из 10-ти строчек и таблицы из 5-ти строчек?
 
 <details>
   <summary>Ответ на задачу 1</summary>
 <p>
 
-    SELECT *
-    FROM CHARACTERS
-    WHERE (Status = 'Alive') AND CharacterID > 2
+    SELECT 
+    	t1.name as "Item name",
+    	t2.name as "Char name"
+    FROM Items t1
+    INNER JOIN Characters t2
+    ON t1.OwnerID = t2.CharacterID 
     
  </p>
     
@@ -367,18 +374,27 @@ SELECT * FROM Items
   <summary>Ответ на задачу 2</summary>
 <p>
 
-    SELECT *
-    FROM Characters
-    WHERE 1=1
-    --- это комментарий, не пугайтесь
-    SELECT *
-    FROM Characters
-    WHERE 0>1
+    SELECT 
+    	t1.name as "Char name",
+    	t2.name as "Item name"
+    FROM Characters t1
+    LEFT JOIN Items t2
+    ON t2.OwnerID = t1.CharacterID 
     
  </p>
     
 </details>
 
+
+<details>
+  <summary>Ответ на задачу 4</summary>
+<p>
+
+Минимум 10, максимум 50
+    
+ </p>
+    
+</details>
 
 
 
