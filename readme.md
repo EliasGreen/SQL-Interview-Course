@@ -10,6 +10,6 @@
 -----
 Автор: [EliasZauer](https://t.me/EliasZauer)
 
-Помогу найти твою первую работу аналитиком от 150к -> https://eliaszauer.tilda.ws/
+Помогу найти твою первую работу аналитиком с ЗП от 150к -> https://eliaszauer.tilda.ws/
 
 v003
