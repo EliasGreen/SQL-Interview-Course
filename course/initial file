@@ -46,12 +46,13 @@ CREATE TABLE Appearances (
 );
 
 CREATE TABLE Items (
-    ItemID INT PRIMARY KEY AUTO_INCREMENT,
+    ItemID INTEGER PRIMARY KEY AUTOINCREMENT,
     Name VARCHAR(100) NOT NULL,
     Description TEXT,
-    OwnerID INT,
+    OwnerID INTEGER,
     FOREIGN KEY (OwnerID) REFERENCES Characters(CharacterID)
 );
+
 
 -- Insert data into Locations table
 INSERT INTO Locations (LocationName, Type, Description) VALUES
@@ -75,5 +76,5 @@ INSERT INTO Appearances (CharacterID, EpisodeID) VALUES
 
 -- Insert data into Items table
 INSERT INTO Items (Name, Description, OwnerID) VALUES
-('Cheesy Poofs', 'Cartman\'s favorite snack', 1),
-('Kenny\'s Orange Hoodie', 'Indestructible hoodie', 4);
+('Cheesy Poofs', 'Cartman favorite snack', 1),
+('Kenny Orange Hoodie', 'Indestructible hoodie', 4);
