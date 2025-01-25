@@ -312,6 +312,76 @@ ON A.col = B.col
 И вот тут начинается самое веселье, ибо если вы не поняли саму механику JOIN'a - то тут все вариации вопроса вы не заучите 
 
 
+-------
+
+Домашка:
+
+Перед выполнение создаем следующие таблички с помощью следующего кода и заполняем их
+
+В результате должно быть +- как на скриншоте
+
+```
+CREATE TABLE Items (
+    ItemID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Name VARCHAR(100) NOT NULL,
+    Description TEXT,
+    OwnerID INTEGER,
+    FOREIGN KEY (OwnerID) REFERENCES Characters(CharacterID)
+);
+
+SELECT * FROM Items
+
+-- Insert data into Items table
+INSERT INTO Items (Name, Description, OwnerID) VALUES
+('Cheesy Poofs', 'Cartman favorite snack', 1),
+('Kenny Orange Hoodie', 'Indestructible hoodie', 4);
+
+SELECT * FROM Items
+```
+
+![image](https://github.com/user-attachments/assets/8c973ef3-7c86-419f-925b-e4320232e873)
+
+
+Да, пока мы просто создадим дополнительную табличку со списком айтемов, которыми владели персонажи мультсериала Южный парк 
+
+Но не бойтесь, вам как и прежде не нужно будет знать сюжет и т.п. - вы и без этого сможете спокойно выполнять задания
+
+
+1). Выбрать из таблицы Characters строчки, у которых CharacterID строго больше 2 и статус равен Alive
+
+2). Задача под звездочкой. Придумайте запрос, который выведет из таблицы Characters все строки и аналогичный запрос, который выведет 0 строк, при этом нельзя использовать названия столбцов
+
+<details>
+  <summary>Ответ на задачу 1</summary>
+<p>
+
+    SELECT *
+    FROM CHARACTERS
+    WHERE (Status = 'Alive') AND CharacterID > 2
+    
+ </p>
+    
+</details>
+
+<details>
+  <summary>Ответ на задачу 2</summary>
+<p>
+
+    SELECT *
+    FROM Characters
+    WHERE 1=1
+    --- это комментарий, не пугайтесь
+    SELECT *
+    FROM Characters
+    WHERE 0>1
+    
+ </p>
+    
+</details>
+
+
+
+
 
 
 
